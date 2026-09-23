@@ -1,0 +1,40 @@
+:root {
+  --bg: #f4f6f5; --card: #ffffff; --text: #16201b; --muted: #5b6b63;
+  --accent: #137a55; --accent-soft: #e3f1ea; --line: #dfe6e2;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0c1210; --card: #151d19; --text: #e9f0ec; --muted: #9db0a6;
+          --accent: #4ac787; --accent-soft: #173226; --line: #24302a; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+       font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+header img { width: 64px; height: 64px; border-radius: 15px; }
+header a { color: inherit; text-decoration: none; }
+header strong { font: 700 24px/1.2 ui-rounded, -apple-system, system-ui, sans-serif; display: block; }
+header span { color: var(--muted); font-size: 15px; }
+nav.lang { margin-left: auto; font-size: 15px; }
+nav.lang a { color: var(--accent); text-decoration: none; margin-left: 12px; }
+h1 { font: 800 34px/1.15 ui-rounded, -apple-system, system-ui, sans-serif; margin: 0 0 8px; letter-spacing: -0.01em; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); font-size: 15px; }
+a { color: var(--accent); }
+section.card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 24px; margin: 24px 0; }
+ul { padding-left: 22px; }
+.pill { display: inline-block; background: var(--accent-soft); color: var(--accent); border-radius: 999px;
+        padding: 4px 12px; font-size: 14px; font-weight: 600; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 56px 0; }
+footer { color: var(--muted); font-size: 14px; margin-top: 48px; }
+footer a { margin-right: 16px; }
+header { flex-wrap: wrap; }
+section.card > h2:first-child { margin-top: 0; }
+@media (max-width: 520px) {
+  nav.lang { margin-left: 0; width: 100%; }
+  nav.lang a:first-child { margin-left: 0; }
+}
+h1, h2 { hyphens: auto; overflow-wrap: break-word; }
+@media (max-width: 520px) { h1 { font-size: 28px; } }
